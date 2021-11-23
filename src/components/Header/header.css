@@ -1,0 +1,130 @@
+.header {
+    height: 100vh;
+}
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("../../assets/images/background_img2.svg");
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+    height: 100%;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+}
+
+.header__content-details {
+    flex: 1;
+    padding: 0 8rem 1rem 1rem;
+    font-family: var(--font-family);
+    padding-left: 1rem;
+}
+
+.header__content-details h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.header__content-details h2 {
+    margin: 0.6rem 0 1rem 0;
+    letter-spacing: 0.1rem;
+    line-height: 2.2rem;
+    font-size: 2rem;
+}
+.header__content-details p {
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    color: var(--color-text-secondary);
+}
+
+.header__social-links {
+    margin: 0;
+    margin-top: 2rem;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.header__social-links li {
+    margin: 0 1rem;
+}
+.header__social-links li:first-child {
+    margin-left: 0;
+}
+
+.header__social-links img {
+    width: 32px;
+}
+
+.header__profile__buttons {
+    margin-top: 2rem;
+    display: flex;
+}
+.header__profile__buttons button {
+    margin: 0 1rem;
+    width: 130px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: auto;
+    }
+    .header__content-details {
+        padding: 0;
+        flex: 1;
+        width: 100%;
+    }
+    .header__content-profile_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 0;
+    }
+    .header__content-details h2 {
+        font-size: 1.8rem;
+        white-space: nowrap;
+    }
+    .header__content-profile_container img {
+        width: 75%;
+    }
+
+    .header__profile__buttons button {
+        width: 100px;
+        margin: 0 0.3rem;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .header__content {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__content-profile_container {
+        margin: 0.5rem 0 2rem 0;
+    }
+    .header__content-details h4 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .header__content-details h2 {
+        font-size: 1.5rem;
+    }
+    .header__social-links {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    .header__content-details h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
