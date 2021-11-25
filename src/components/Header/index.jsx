@@ -10,7 +10,7 @@ import Github from "../../assets/images/github.svg";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" id="home">
       <Navbar />
       <div className="header__content section__padding">
         <div className="header__content-details">
@@ -26,27 +26,47 @@ const Header = () => {
           </p>
           <ul className="header__social-links">
             <li>
-              <a href="" target="_blank">
+              <a
+                href="https://www.instagram.com/crazy.dev.mukesh"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={Instagram} alt="profile" />
               </a>
             </li>
             <li>
-              <a href="" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/mukesh-kumar-4597a0146/"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <img src={LinkedIn} alt="profile" />
               </a>
             </li>
             <li>
-              <a href="" target="_blank">
+              <a
+                href="https://www.facebook.com/mslifelineway"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <img src={Facebook} alt="profile" />
               </a>
             </li>
             <li>
-              <a href="" target="_blank">
+              <a
+                href="https://twitter.com/oyemukesh"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <img src={Twitter} alt="profile" />
               </a>
             </li>
             <li>
-              <a href="" target="_blank">
+              <a
+                href="https://github.com/mslifelineway"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <img src={Github} alt="profile" />
               </a>
             </li>

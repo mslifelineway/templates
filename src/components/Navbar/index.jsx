@@ -1,10 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import MenuButton from "../../assets/images/menu-button.svg";
 import CloseButton from "../../assets/images/close-button.svg";
 
 const Menu = () => (
   <ul className="navbar__menu">
+    <li>
+      <a href="#home" className="gradient__text">
+        Home
+      </a>
+    </li>
     <li>
       <a href="#about" className="gradient__text">
         About
@@ -32,32 +37,27 @@ const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
   const [goingUp, setGoingUp] = useState(false);
 
-  const prevScrollY = useRef(0);
-
-  console.log("===> scrollY: ", scrollY, prevScrollY, goingUp);
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (prevScrollY.current < currentScrollY && goingUp) {
+      if (scrollY < currentScrollY && goingUp) {
         setGoingUp(false);
       }
-      if (prevScrollY.current > currentScrollY && !goingUp) {
+      if (scrollY > currentScrollY && !goingUp) {
         setGoingUp(true);
       }
-      prevScrollY.current = currentScrollY;
       setScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [goingUp]);
+  }, [goingUp, scrollY]);
 
   return (
     <div
       className={`navbar section__padding navbar__fixed ${
-        prevScrollY.current > 45 && !goingUp ? "bg__white" : ""
+        scrollY > 45 && !goingUp ? "bg__white" : ""
       }`}
     >
       <div className="navbar__logo">

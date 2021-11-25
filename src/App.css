@@ -84,7 +84,7 @@ a {
   left: 0;
 }
 .bg__white {
-  background: red;
+  background: linear-gradient(to bottom, #ccc, rgba(255, 255, 255, 0.06));
 }
 .scale-up-center {
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;

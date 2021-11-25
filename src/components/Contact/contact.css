@@ -1,0 +1,48 @@
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact__image {
+    flex: 0.5;
+    padding: 1rem 6rem;
+}
+.contact__image img {
+    width: 100%;
+    height: auto;
+}
+.contact__details {
+    flex: 1;
+    padding-left: 3rem;
+}
+.contact__details--basic h4 {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+}
+.contact__details--basic h4 span {
+    font-size: 3rem;
+}
+
+.contact__details--basic h4:nth-child(2) {
+    font-weight: 500;
+}
+
+.contact__details--basic p {
+    margin-top: 1.5rem;
+    font-family: var(--font-family);
+    letter-spacing: 0.12rem;
+}
+
+.contact__communication {
+    display: flex;
+    margin-top: 1rem;
+}
+.contact__communication img {
+    width: 25px;
+    margin-right: 1rem;
+}
+.contact__communication p {
+    font-family: var(--font-family);
+    letter-spacing: 0.12rem;
+}
