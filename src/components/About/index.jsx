@@ -28,19 +28,19 @@ const details = [
   },
 ];
 const About = () => {
-  const RenderCard = ({ detail }) => {
-    return (
-      <div className={`about__card about__card--gradient_${detail.id}`}>
-        <h2>{detail.title}</h2>
-        <p>{detail.description}</p>
-      </div>
-    );
-  };
   return (
     <div className="about section__padding" id="about">
-      {details.map((detail) => (
-        <RenderCard detail={detail} />
-      ))}
+      {details.map((detail) => {
+        return (
+          <div
+            className={`about__card about__card--gradient_${detail.id}`}
+            key={`${detail.title}"_"${detail.id}`}
+          >
+            <h2>{detail.title}</h2>
+            <p>{detail.description}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };

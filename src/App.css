@@ -126,6 +126,10 @@ a {
   height: 40vh;
 }
 
+.error__border {
+  border: 1px solid red !important;
+}
+
 @media screen and (max-width: 992px) {
   .section__padding {
     padding: 2rem 4rem;

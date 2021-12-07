@@ -3,39 +3,44 @@ import "./navbar.css";
 import MenuButton from "../../assets/images/menu-button.svg";
 import CloseButton from "../../assets/images/close-button.svg";
 
-const Menu = () => (
-  <ul className="navbar__menu">
-    <li>
-      <a href="#home" className="gradient__text">
-        Home
-      </a>
-    </li>
-    <li>
-      <a href="#about" className="gradient__text">
-        About
-      </a>
-    </li>
-    <li>
-      <a href="#services" className="gradient__text">
-        Services
-      </a>
-    </li>
-    <li>
-      <a href="#contact" className="gradient__text">
-        Contact
-      </a>
-    </li>
-    <li>
-      <a href="#blogs" className="gradient__text">
-        Blogs
-      </a>
-    </li>
-  </ul>
-);
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [goingUp, setGoingUp] = useState(false);
+
+  const closeMenu = () => {
+    setToggleMenu(false);
+  };
+
+  const Menu = () => (
+    <ul className="navbar__menu">
+      <li>
+        <a href="#home" className="gradient__text" onClick={closeMenu}>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#about" className="gradient__text" onClick={closeMenu}>
+          About
+        </a>
+      </li>
+      {/* <li>
+      <a href="#services" className="gradient__text" onClick={closeMenu}>
+        Services
+      </a>
+    </li> */}
+      <li>
+        <a href="#contact" className="gradient__text" onClick={closeMenu}>
+          Contact
+        </a>
+      </li>
+      {/* <li>
+      <a href="#blogs" className="gradient__text" onClick={closeMenu}>
+        Blogs
+      </a>
+    </li> */}
+    </ul>
+  );
 
   useEffect(() => {
     const handleScroll = () => {

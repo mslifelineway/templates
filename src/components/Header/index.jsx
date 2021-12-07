@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import Navbar from "../Navbar";
 import "./header.css";
 import Profile from "../../assets/images/profile-image-frame.svg";
@@ -7,10 +8,34 @@ import Facebook from "../../assets/images/facebook.svg";
 import LinkedIn from "../../assets/images/linkedIn.svg";
 import Twitter from "../../assets/images/twitter.svg";
 import Github from "../../assets/images/github.svg";
+import { HireMeForm } from "..";
+import { ToastContainer } from "react-toastify";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    open
+      ? ReactDOM.render(
+          <HireMeForm setOpen={setOpen} />,
+          document.getElementById("hireme__form__modal")
+        )
+      : ReactDOM.render("", document.getElementById("hireme__form__modal"));
+  }, [open]);
+
   return (
     <div className="header" id="home">
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Navbar />
       <div style={{ height: 97 }}></div>
       <div className="header__content section__padding">
@@ -79,7 +104,9 @@ const Header = () => {
             <a href="/assets/cv/mukesh_kumar_CV.docx" download>
               <button className="gradient__button">Download CV</button>
             </a>
-            <button className="gradient__button">Hire Me</button>
+            <button className="gradient__button" onClick={() => setOpen(true)}>
+              Hire Me
+            </button>
           </div>
         </div>
       </div>
