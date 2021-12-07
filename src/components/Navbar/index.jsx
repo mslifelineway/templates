@@ -70,6 +70,7 @@ const Navbar = () => {
         <a
           href="//api.whatsapp.com/send?phone=917015720216&text=Thanks for contacting me. I will respond you soon."
           target="_blank"
+          rel="noreferrer"
         >
           <button className="navbar__button-connect gradient__button">
             Connect
@@ -98,6 +99,7 @@ const Navbar = () => {
             <a
               href="//api.whatsapp.com/send?phone=917015720216&text=Thanks for contacting me. I will respond you soon."
               target="_blank"
+              rel="noreferrer"
             >
               <button className="navbar__button-connect gradient__button">
                 Connect
