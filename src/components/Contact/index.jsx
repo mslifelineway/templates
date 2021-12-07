@@ -7,9 +7,7 @@ import CallIcon from "../../assets/images/call.svg";
 const Contact = () => {
   return (
     <div className="contact section__padding" id="contact">
-      <div className="contact__image">
-        <img src={Banner} alt="banner" />
-      </div>
+      <img src={Banner} className="contact--image" alt="banner" />
       <div className="contact__details">
         <div className="contact__details--basic">
           <h4>

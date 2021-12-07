@@ -12,6 +12,7 @@ const Header = () => {
   return (
     <div className="header" id="home">
       <Navbar />
+      <div style={{ height: 97 }}></div>
       <div className="header__content section__padding">
         <div className="header__content-details">
           <h4>Hello I'm Mukesh</h4>
@@ -75,7 +76,9 @@ const Header = () => {
         <div className="header__content-profile_container">
           <img src={Profile} alt="profile" />
           <div className="header__profile__buttons">
-            <button className="gradient__button">Download CV</button>
+            <a href="/assets/cv/mukesh_kumar_CV.docx" download>
+              <button className="gradient__button">Download CV</button>
+            </a>
             <button className="gradient__button">Hire Me</button>
           </div>
         </div>

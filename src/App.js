@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { About, Services, Header, Contact, Footer } from "./components";
 
@@ -9,6 +10,7 @@ function App() {
       <Services />
       <Contact />
       <Footer />
+      <div className="app__footer"></div>
     </div>
   );
 }

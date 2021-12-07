@@ -7,7 +7,7 @@
 
 body {
   background: var(--color-body-bg);
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
 }
 
 a {
@@ -79,6 +79,7 @@ a {
 
 .navbar__fixed {
   position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -112,6 +113,24 @@ a {
   }
 }
 
+.app__footer {
+  content: "";
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: 0;
+  background-image: url("./assets/images/background_img2.svg");
+  background-size: cover;
+  opacity: 0.05;
+  z-index: -1;
+  height: 40vh;
+}
+
+@media screen and (max-width: 992px) {
+  .section__padding {
+    padding: 2rem 4rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .section__padding {
     padding: 2rem 4rem;

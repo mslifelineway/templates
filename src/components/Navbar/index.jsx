@@ -40,7 +40,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (scrollY < currentScrollY && goingUp) {
+      if (scrollY < currentScrollY) {
         setGoingUp(false);
       }
       if (scrollY > currentScrollY && !goingUp) {
@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <div
       className={`navbar section__padding navbar__fixed ${
-        scrollY > 45 && !goingUp ? "bg__white" : ""
+        scrollY > 45 ? "bg__white" : ""
       }`}
     >
       <div className="navbar__logo">
@@ -67,9 +67,14 @@ const Navbar = () => {
         <Menu />
       </div>
       <div className="navbar__desktop-buttons_container">
-        <button className="navbar__button-connect gradient__button">
-          Connect
-        </button>
+        <a
+          href="//api.whatsapp.com/send?phone=917015720216&text=Thanks for contacting me. I will respond you soon."
+          target="_blank"
+        >
+          <button className="navbar__button-connect gradient__button">
+            Connect
+          </button>
+        </a>
       </div>
 
       <div className="navbar-mobile_menu">
@@ -90,9 +95,14 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="navbar-menu_container scale-up-center">
             <Menu />
-            <button className="navbar__button-connect gradient__button">
-              Connect
-            </button>
+            <a
+              href="//api.whatsapp.com/send?phone=917015720216&text=Thanks for contacting me. I will respond you soon."
+              target="_blank"
+            >
+              <button className="navbar__button-connect gradient__button">
+                Connect
+              </button>
+            </a>
           </div>
         )}
       </div>
