@@ -1,7 +1,9 @@
 export { default as Header } from "./Header";
-export { default as Navbar } from "./Header";
+export { default as Navbar } from "./Navbar";
 export { default as About } from "./About";
 export { default as Contact } from "./Contact";
 export { default as Services } from "./Services";
 export { default as Footer } from "./Footer";
 export { default as HireMeForm } from "./HireMeForm";
+export { default as Layout } from "./Layout";
+export { default as RemoveDuplicates } from "./DSA/ARRAY/RemoveDuplicatesFromArray";

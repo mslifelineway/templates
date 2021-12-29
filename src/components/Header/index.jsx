@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import Navbar from "../Navbar";
 import "./header.css";
 import Profile from "../../assets/images/profile-image-frame.svg";
 import Instagram from "../../assets/images/instagram.svg";
@@ -36,19 +35,18 @@ const Header = () => {
         draggable
         pauseOnHover
       />
-      <Navbar />
-      <div style={{ height: 97 }}></div>
+
       <div className="header__content section__padding">
         <div className="header__content-details">
           <h4>Hello I'm Mukesh</h4>
           <h2>MERN full stack developer</h2>
           <p>
-            Working as an associate bussiness analyst at Infosys and having the
-            zeal to up-skill, being efficient & productive for the company &
-            develop as well as diversifying my professional skill-set. Looking
-            forward to working as a software developer in a Multinational
-            Corporation to get more exposure to international clients. I have a
-            team of 4 members and ready for freelancing.
+            Working as mern stack developer and having the zeal to up-skill,
+            being efficient & productive for the company & develop as well as
+            diversifying my professional skill-set. Looking forward to working
+            as a software developer in a Multinational Corporation to get more
+            exposure to international clients. I have a team of 4 members and
+            ready for freelancing.
           </p>
           <ul className="header__social-links">
             <li>

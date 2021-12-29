@@ -155,3 +155,23 @@ a {
 .btnClose {
   width: 25px;
 }
+
+.blogs {
+  font-family: "Manrope";
+  min-height: 45vh;
+}
+
+.code {
+  display: flex;
+  background: #f3f3f3;
+}
+
+.code__example {
+  padding: 2rem;
+  flex: 1;
+}
+.example__result {
+  padding: 2rem;
+  flex: 1;
+  border-left: 2px solid #e4e4e4;
+}

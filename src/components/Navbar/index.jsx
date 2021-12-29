@@ -15,12 +15,12 @@ const Navbar = () => {
   const Menu = () => (
     <ul className="navbar__menu">
       <li>
-        <a href="#home" className="gradient__text" onClick={closeMenu}>
+        <a href="./#home" className="gradient__text" onClick={closeMenu}>
           Home
         </a>
       </li>
       <li>
-        <a href="#about" className="gradient__text" onClick={closeMenu}>
+        <a href="./#about" className="gradient__text" onClick={closeMenu}>
           About
         </a>
       </li>
@@ -30,7 +30,7 @@ const Navbar = () => {
       </a>
     </li> */}
       <li>
-        <a href="#contact" className="gradient__text" onClick={closeMenu}>
+        <a href="./#contact" className="gradient__text" onClick={closeMenu}>
           Contact
         </a>
       </li>
@@ -39,6 +39,11 @@ const Navbar = () => {
         Blogs
       </a>
     </li> */}
+      {/* <li>
+        <a href="/blogs" className="gradient__text" onClick={closeMenu}>
+          Blogs
+        </a>
+      </li> */}
     </ul>
   );
 

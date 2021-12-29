@@ -1,0 +1,19 @@
+.menu__level__1 {
+    list-style: disc;
+}
+.menu__level__1 span {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.menu__level__1 a:hover {
+    color: blue;
+}
+
+.menu__level__2 {
+    margin-left: 2rem;
+}
+
+.menu__level__3 {
+    margin-left: 4rem;
+}

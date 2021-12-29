@@ -1,16 +1,24 @@
 import React from "react";
 import "./App.css";
-import { About, Services, Header, Contact, Footer } from "./components";
+import Dashboard from "./pages/Dashboard";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { pagePaths } from "./utils/constants";
+import Blogs from "./pages/Blogs";
+import { RemoveDuplicates } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <About />
-      <Services />
-      <Contact />
-      <Footer />
-      <div className="app__footer"></div>
+      <Router>
+        <Routes>
+          <Route exact path={pagePaths.root} element={<Dashboard />} />
+          <Route path={pagePaths.blogs} element={<Blogs />} />
+          <Route
+            path={pagePaths.removeDuplicates}
+            element={<RemoveDuplicates />}
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }
